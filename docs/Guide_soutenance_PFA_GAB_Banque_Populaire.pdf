@@ -1,0 +1,835 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 3585 >>
+stream
+BT
+/F2 18 Tf
+1 0 0 1 48.00 788.00 Tm (Guide pédagogique complet - Projet PFA Maintenance) Tj
+1 0 0 1 48.00 767.00 Tm (  prédictive des GAB) Tj
+/F1 10 Tf
+1 0 0 1 48.00 732.00 Tm (Document généré le 2026-06-18 12:10 depuis le code réel du projet `app_gab_react`.) Tj
+/F2 15 Tf
+1 0 0 1 48.00 705.00 Tm (1. Présentation générale du projet) Tj
+/F2 12 Tf
+1 0 0 1 48.00 675.00 Tm (Contexte Banque Populaire) Tj
+/F1 10 Tf
+1 0 0 1 48.00 650.00 Tm (Le projet concerne le réseau de GAB de la Banque Populaire. Un GAB est un point de contact) Tj
+1 0 0 1 48.00 637.00 Tm (  critique entre la banque et ses clients. Lorsqu'un automate tombe en panne, l'impact n'est) Tj
+1 0 0 1 48.00 624.00 Tm (  pas seulement technique: il touche l'expérience client, la disponibilité du cash, l'image de) Tj
+1 0 0 1 48.00 611.00 Tm (  la banque et la charge des équipes maintenance.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 590.00 Tm (Problématique métier) Tj
+/F1 10 Tf
+1 0 0 1 48.00 565.00 Tm (La problématique est: comment identifier à l'avance les GAB qui ont le plus de chances de) Tj
+1 0 0 1 48.00 552.00 Tm (  devenir critiques, afin de planifier des interventions préventives au lieu de réagir après) Tj
+1 0 0 1 48.00 539.00 Tm (  incident ?) Tj
+/F2 12 Tf
+1 0 0 1 48.00 518.00 Tm (Importance de la maintenance prédictive) Tj
+/F1 10 Tf
+1 0 0 1 48.00 493.00 Tm (La maintenance prédictive permet de réduire les interruptions de service, prioriser les) Tj
+1 0 0 1 48.00 480.00 Tm (  techniciens, exploiter l'historique d'incidents et transformer des fichiers Excel) Tj
+1 0 0 1 48.00 467.00 Tm (  opérationnels en outil décisionnel.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 446.00 Tm (Objectifs et résultats) Tj
+/F3 8 Tf
+1 0 0 1 48.00 421.00 Tm (| Indicateur | Valeur réelle du projet |) Tj
+1 0 0 1 48.00 407.00 Tm (|---|---:|) Tj
+1 0 0 1 48.00 393.00 Tm (| Incidents chargés | 9616 |) Tj
+1 0 0 1 48.00 379.00 Tm (| Agences | 223 |) Tj
+1 0 0 1 48.00 365.00 Tm (| GAB | 306 |) Tj
+1 0 0 1 48.00 351.00 Tm (| Villes RGPH | 9 |) Tj
+1 0 0 1 48.00 337.00 Tm (| Population RGPH totale | 5 593 678 |) Tj
+1 0 0 1 48.00 323.00 Tm (| MTTR | 120.8 min |) Tj
+1 0 0 1 48.00 309.00 Tm (| Motif dominant | Separateur |) Tj
+1 0 0 1 48.00 295.00 Tm (| Catégorie dominante | HARDWARE |) Tj
+1 0 0 1 48.00 281.00 Tm (| GAB disponibles pour prédiction | 306 |) Tj
+1 0 0 1 48.00 267.00 Tm (| GAB affichés à risque par filtre frontend | 53 |) Tj
+/F2 15 Tf
+1 0 0 1 48.00 247.00 Tm (2. Architecture complète du système) Tj
+/F3 8 Tf
+1 0 0 1 48.00 217.00 Tm (                 +-------------------------------+) Tj
+1 0 0 1 48.00 205.00 Tm (                 |  Fichiers Excel réels          |) Tj
+1 0 0 1 48.00 193.00 Tm (                 |  Incidents, RGPH, mapping      |) Tj
+1 0 0 1 48.00 181.00 Tm (                 +---------------+---------------+) Tj
+1 0 0 1 48.00 169.00 Tm (                                 |) Tj
+1 0 0 1 48.00 157.00 Tm (                                 v) Tj
+1 0 0 1 48.00 145.00 Tm (+--------------------+    +-------------------------------+) Tj
+1 0 0 1 48.00 133.00 Tm (| Frontend React     |    | Backend FastAPI                |) Tj
+1 0 0 1 48.00 121.00 Tm (| Vite + TypeScript  |<-->| API REST /api/...              |) Tj
+1 0 0 1 48.00 109.00 Tm (| Pages + composants |    | Services métier + schémas      |) Tj
+1 0 0 1 48.00 97.00 Tm (+---------+----------+    +---------------+---------------+) Tj
+1 0 0 1 48.00 85.00 Tm (          |                               |) Tj
+1 0 0 1 48.00 73.00 Tm (          |                               v) Tj
+1 0 0 1 48.00 61.00 Tm (          |               +-------------------------------+) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 28 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 4200 >>
+stream
+BT
+/F3 8 Tf
+1 0 0 1 48.00 788.00 Tm (          |               | Store mémoire                  |) Tj
+1 0 0 1 48.00 776.00 Tm (          |               | cities, agencies, atms,        |) Tj
+1 0 0 1 48.00 764.00 Tm (          |               | incidents                      |) Tj
+1 0 0 1 48.00 752.00 Tm (          |               +---------------+---------------+) Tj
+1 0 0 1 48.00 740.00 Tm (          |                               |) Tj
+1 0 0 1 48.00 728.00 Tm (          |                               v) Tj
+1 0 0 1 48.00 716.00 Tm (          |               +-------------------------------+) Tj
+1 0 0 1 48.00 704.00 Tm (          |               | Pipeline Machine Learning       |) Tj
+1 0 0 1 48.00 692.00 Tm (          |               | features, target mois suivant,  |) Tj
+1 0 0 1 48.00 680.00 Tm (          |               | Random Forest, joblib           |) Tj
+1 0 0 1 48.00 668.00 Tm (          |               +---------------+---------------+) Tj
+1 0 0 1 48.00 656.00 Tm (          v                               v) Tj
+1 0 0 1 48.00 644.00 Tm (+--------------------+    +-------------------------------+) Tj
+1 0 0 1 48.00 632.00 Tm (| Visualisations     |    | Artefact ML                    |) Tj
+1 0 0 1 48.00 620.00 Tm (| Dashboard, Carte,  |    | backend/ml_artifacts/          |) Tj
+1 0 0 1 48.00 608.00 Tm (| Prédiction IA      |    | gab_failure_random_forest      |) Tj
+1 0 0 1 48.00 596.00 Tm (+--------------------+    +-------------------------------+) Tj
+/F1 10 Tf
+1 0 0 1 48.00 578.00 Tm (Rôle des composants: React affiche l'interface, FastAPI expose les données et calculs, le) Tj
+1 0 0 1 48.00 565.00 Tm (  store mémoire accélère les lectures, le modèle ML estime une probabilité de panne, et les) Tj
+1 0 0 1 48.00 552.00 Tm (  fichiers Excel sont les sources réelles.) Tj
+/F2 15 Tf
+1 0 0 1 48.00 531.00 Tm (3. Structure du projet) Tj
+/F2 12 Tf
+1 0 0 1 48.00 501.00 Tm (Frontend) Tj
+/F3 8 Tf
+1 0 0 1 48.00 476.00 Tm (| Dossier/fichier | Rôle |) Tj
+1 0 0 1 48.00 462.00 Tm (|---|---|) Tj
+1 0 0 1 48.00 448.00 Tm (| `frontend/src/pages` | Pages: Dashboard, incidents, RGPH, carte, prédiction, recommandations. |) Tj
+1 0 0 1 48.00 434.00 Tm (| `frontend/src/components` | Composants réutilisables: cartes KPI, charts, layout, tables, badges. |) Tj
+1 0 0 1 48.00 420.00 Tm (| `frontend/src/services/api.ts` | Client API, timeout, gestion d'erreurs, proxy `/api`. |) Tj
+1 0 0 1 48.00 406.00 Tm (| `frontend/src/types/api.ts` | Interfaces TypeScript des réponses backend. |) Tj
+1 0 0 1 48.00 392.00 Tm (| `frontend/src/routes/AppRoutes.tsx` | Routes React. |) Tj
+1 0 0 1 48.00 378.00 Tm (| `frontend/src/App.tsx` | Layout global Sidebar + Navbar + contenu. |) Tj
+/F2 12 Tf
+1 0 0 1 48.00 358.00 Tm (Backend) Tj
+/F3 8 Tf
+1 0 0 1 48.00 333.00 Tm (| Dossier/fichier | Rôle |) Tj
+1 0 0 1 48.00 319.00 Tm (|---|---|) Tj
+1 0 0 1 48.00 305.00 Tm (| `backend/app/api` | Routes FastAPI par domaine. |) Tj
+1 0 0 1 48.00 291.00 Tm (| `backend/app/services` | Logique métier: Excel, KPIs, RGPH, IA. |) Tj
+1 0 0 1 48.00 277.00 Tm (| `backend/app/schemas` | Schémas Pydantic. |) Tj
+1 0 0 1 48.00 263.00 Tm (| `backend/app/store.py` | Store mémoire des villes, agences, GAB, incidents. |) Tj
+1 0 0 1 48.00 249.00 Tm (| `backend/ml_artifacts` | Modèles sauvegardés avec joblib. |) Tj
+1 0 0 1 48.00 235.00 Tm (| `backend/scripts` | Scripts dataset et entraînement ML. |) Tj
+1 0 0 1 48.00 221.00 Tm (| `backend/app/main.py` | App FastAPI, CORS, routeurs, chargement startup. |) Tj
+/F2 15 Tf
+1 0 0 1 48.00 201.00 Tm (4. Analyse détaillée des données) Tj
+/F1 10 Tf
+1 0 0 1 48.00 171.00 Tm (Fichiers utilisés: `Pannes_GAB_Fusionnees\(1\) \(1\).xlsx`, `RGPH_2024_Banque_Populaire) Tj
+1 0 0 1 48.00 158.00 Tm (  \(1\).xlsx`, `Mapping_Agence_Ville.xlsx`, `Statistiques_Villes.xlsx`.) Tj
+/F3 8 Tf
+1 0 0 1 48.00 137.00 Tm (| Colonne incidents | Utilisation |) Tj
+1 0 0 1 48.00 123.00 Tm (|---|---|) Tj
+1 0 0 1 48.00 109.00 Tm (| Agence | rattachement du GAB et mapping ville |) Tj
+1 0 0 1 48.00 95.00 Tm (| Code Agence | fallback de mapping ville |) Tj
+1 0 0 1 48.00 81.00 Tm (| Code GAB | identifiant automate |) Tj
+1 0 0 1 48.00 67.00 Tm (| Type GAB | variable catégorielle WINCOR/NCR |) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 28 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 4270 >>
+stream
+BT
+/F3 8 Tf
+1 0 0 1 48.00 788.00 Tm (| Date & heure Réel | séries temporelles et fenêtres 7/30/90 jours |) Tj
+1 0 0 1 48.00 774.00 Tm (| Durée \(min\) | MTTR, durée moyenne, score métier |) Tj
+1 0 0 1 48.00 760.00 Tm (| Catégorie | dominante, encodage ML, poids métier |) Tj
+1 0 0 1 48.00 746.00 Tm (| Motif | motif dominant, recommandations |) Tj
+1 0 0 1 48.00 732.00 Tm (| Mois_Source | tendance mensuelle réelle |) Tj
+/F1 10 Tf
+1 0 0 1 48.00 712.00 Tm (Nettoyage: `_key`, `_column`, `_clean_str`, `_number`, `_read_excel` rendent l'import) Tj
+1 0 0 1 48.00 699.00 Tm (  robuste aux accents, alias, valeurs manquantes et formats numériques.) Tj
+1 0 0 1 48.00 678.00 Tm (Données RGPH: population, hommes/femmes, tranches d'âge, `pctOver60`. Elles servent aux KPIs) Tj
+1 0 0 1 48.00 665.00 Tm (  démographiques, incidents par 100k habitants et features ML.) Tj
+/F2 15 Tf
+1 0 0 1 48.00 644.00 Tm (5. Feature Engineering) Tj
+/F3 8 Tf
+1 0 0 1 48.00 614.00 Tm (| Feature | Définition | Formule utilisée | Intérêt métier | Impact possible |) Tj
+1 0 0 1 48.00 600.00 Tm (|---|---|---|---|---|) Tj
+1 0 0 1 48.00 586.00 Tm (| `incidents_7d` | incidents récents très courts | count cutoff-7j à cutoff | crise immédiate | augmente le risque si) Tj
+1 0 0 1 48.00 574.00 Tm (  forte hausse |) Tj
+1 0 0 1 48.00 560.00 Tm (| `incidents_30d` | incidents du dernier mois | count cutoff-30j à cutoff | dynamique mensuelle | fortement lié à la) Tj
+1 0 0 1 48.00 548.00 Tm (  maintenance |) Tj
+1 0 0 1 48.00 534.00 Tm (| `incidents_90d` | incidents du trimestre | count cutoff-90j à cutoff | fragilité durable | stabilise la prédiction |) Tj
+1 0 0 1 48.00 520.00 Tm (| `monthly_frequency` | moyenne mensuelle | len\(history\)/observed_months | comparer les GAB | risque élevé si) Tj
+1 0 0 1 48.00 508.00 Tm (  fréquence élevée |) Tj
+1 0 0 1 48.00 494.00 Tm (| `atm_age` | âge approximatif | cutoff.year - year_installed | usure potentielle | peut augmenter le risque |) Tj
+1 0 0 1 48.00 480.00 Tm (| `population` | population ville | RGPH | volume potentiel | enjeu métier plus fort |) Tj
+1 0 0 1 48.00 466.00 Tm (| `pct_over60` | part 60+ | RGPH | contexte territorial | criticité locale |) Tj
+1 0 0 1 48.00 452.00 Tm (| `transaction_volume` | transactions/jour | estimation ou saisie | charge d'utilisation | plus de charge peut) Tj
+1 0 0 1 48.00 440.00 Tm (  augmenter le risque |) Tj
+1 0 0 1 48.00 426.00 Tm (| `category_code` | catégorie encodée | `_encode` | intégrer HARDWARE/AUTRES/FONDS | pattern de panne |) Tj
+1 0 0 1 48.00 412.00 Tm (| `motif_code` | motif encodé | `_encode` | motif de panne dominant | pattern récurrent |) Tj
+1 0 0 1 48.00 398.00 Tm (| `type_code` | type GAB encodé | `_encode` | WINCOR/NCR | différence matérielle |) Tj
+1 0 0 1 48.00 384.00 Tm (| `city_code` | ville encodée | `_encode` | contexte géographique | effet local |) Tj
+1 0 0 1 48.00 370.00 Tm (| `agency_code` | agence encodée | `_encode` | contexte agence | effet agence |) Tj
+/F1 10 Tf
+1 0 0 1 48.00 350.00 Tm (Exemple réel GAB 1081: AL QODS, Kénitra, WINCOR, catégorie AUTRES, motif Perturbation, 4) Tj
+1 0 0 1 48.00 337.00 Tm (  incidents sur 7j, 19 sur 30j, 30 sur 90j, fréquence 9.0, population 1 274 663, pct 60+ 11.8,) Tj
+1 0 0 1 48.00 324.00 Tm (  transactions estimées 3670.) Tj
+/F2 15 Tf
+1 0 0 1 48.00 303.00 Tm (6. Création de la Target) Tj
+/F1 10 Tf
+1 0 0 1 48.00 273.00 Tm (Le fichier incidents ne contient pas une colonne `panne_future`. Le code construit donc une) Tj
+1 0 0 1 48.00 260.00 Tm (  cible d'apprentissage:) Tj
+/F3 8 Tf
+1 0 0 1 48.00 239.00 Tm (Pour chaque mois M:) Tj
+1 0 0 1 48.00 227.00 Tm (  features = historique du GAB jusqu'à fin M) Tj
+1 0 0 1 48.00 215.00 Tm (  next_count = incidents du GAB au mois M+1) Tj
+1 0 0 1 48.00 203.00 Tm (  threshold = max\(3, percentile_75 des next_count positifs\)) Tj
+1 0 0 1 48.00 191.00 Tm (  target = 1 si next_count >= threshold, sinon 0) Tj
+/F1 10 Tf
+1 0 0 1 48.00 173.00 Tm (Résultats dataset ML: 2053 lignes, 561 positives, 1492 négatives, seuil critique moyen 6.0) Tj
+1 0 0 1 48.00 160.00 Tm (  incidents.) Tj
+1 0 0 1 48.00 139.00 Tm (Cette approche simule une vraie question métier: à partir des données connues aujourd'hui,) Tj
+1 0 0 1 48.00 126.00 Tm (  le GAB risque-t-il de devenir critique le mois prochain ?) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 28 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 3390 >>
+stream
+BT
+/F2 15 Tf
+1 0 0 1 48.00 788.00 Tm (7. Machine Learning) Tj
+/F1 10 Tf
+1 0 0 1 48.00 758.00 Tm (Random Forest est choisi car il est robuste sur données tabulaires, supporte des relations) Tj
+1 0 0 1 48.00 745.00 Tm (  non linéaires et reste explicable en soutenance.) Tj
+/F3 8 Tf
+1 0 0 1 48.00 724.00 Tm (Features GAB) Tj
+1 0 0 1 48.00 712.00 Tm (   +--> Arbre 1: vote risque) Tj
+1 0 0 1 48.00 700.00 Tm (   +--> Arbre 2: vote risque) Tj
+1 0 0 1 48.00 688.00 Tm (   +--> Arbre 3: vote risque) Tj
+1 0 0 1 48.00 676.00 Tm (   +--> ...) Tj
+1 0 0 1 48.00 664.00 Tm (   v) Tj
+1 0 0 1 48.00 652.00 Tm (Moyenne des votes -> probabilité de panne) Tj
+/F1 10 Tf
+1 0 0 1 48.00 634.00 Tm (Configuration réelle:) Tj
+/F3 8 Tf
+1 0 0 1 48.00 613.00 Tm (RandomForestClassifier\() Tj
+1 0 0 1 48.00 601.00 Tm (  n_estimators=180,) Tj
+1 0 0 1 48.00 589.00 Tm (  max_depth=8,) Tj
+1 0 0 1 48.00 577.00 Tm (  min_samples_leaf=2,) Tj
+1 0 0 1 48.00 565.00 Tm (  random_state=42,) Tj
+1 0 0 1 48.00 553.00 Tm (  class_weight='balanced') Tj
+1 0 0 1 48.00 541.00 Tm (\)) Tj
+/F1 10 Tf
+1 0 0 1 48.00 523.00 Tm (Sauvegarde: `backend/ml_artifacts/gab_failure_random_forest.joblib`. L'artefact contient le) Tj
+1 0 0 1 48.00 510.00 Tm (  modèle, les colonnes, les encodeurs, les métriques, le seuil target et la date) Tj
+1 0 0 1 48.00 497.00 Tm (  d'entraînement.) Tj
+/F2 15 Tf
+1 0 0 1 48.00 476.00 Tm (8. Évaluation du modèle) Tj
+/F3 8 Tf
+1 0 0 1 48.00 446.00 Tm (| Métrique | Valeur | Interprétation |) Tj
+1 0 0 1 48.00 432.00 Tm (|---|---:|---|) Tj
+1 0 0 1 48.00 418.00 Tm (| Accuracy | 0.774 | 77.4% des exemples bien classés |) Tj
+1 0 0 1 48.00 404.00 Tm (| Precision | 0.651 | 65.1% des alertes positives pertinentes |) Tj
+1 0 0 1 48.00 390.00 Tm (| Recall | 0.458 | 45.8% des vrais positifs détectés |) Tj
+1 0 0 1 48.00 376.00 Tm (| F1 Score | 0.537 | compromis precision/recall perfectible |) Tj
+1 0 0 1 48.00 362.00 Tm (| ROC AUC | 0.803 | bonne capacité à classer les GAB par risque |) Tj
+/F1 10 Tf
+1 0 0 1 48.00 342.00 Tm (Lecture soutenance: le modèle est utile pour le ranking et la priorisation; le recall doit) Tj
+1 0 0 1 48.00 329.00 Tm (  être amélioré avec plus d'historique, transactions réelles et labels maintenance.) Tj
+/F2 15 Tf
+1 0 0 1 48.00 308.00 Tm (9. Fonctionnement de la prédiction) Tj
+/F3 8 Tf
+1 0 0 1 48.00 278.00 Tm (Utilisateur -> React: choisit Code GAB) Tj
+1 0 0 1 48.00 266.00 Tm (React -> GET /api/predict/atms) Tj
+1 0 0 1 48.00 254.00 Tm (FastAPI -> ai_service: construit features par GAB) Tj
+1 0 0 1 48.00 242.00 Tm (FastAPI -> React: liste des GAB) Tj
+1 0 0 1 48.00 230.00 Tm (Utilisateur -> React: clique Calculer le risque) Tj
+1 0 0 1 48.00 218.00 Tm (React -> POST /api/predict) Tj
+1 0 0 1 48.00 206.00 Tm (FastAPI -> ai_service: reconstruit features depuis historique réel) Tj
+1 0 0 1 48.00 194.00 Tm (ai_service -> joblib: charge Random Forest) Tj
+1 0 0 1 48.00 182.00 Tm (Random Forest -> ai_service: probabilité) Tj
+1 0 0 1 48.00 170.00 Tm (FastAPI -> React: score, niveau, explication) Tj
+1 0 0 1 48.00 158.00 Tm (React -> Utilisateur: résultat) Tj
+/F2 15 Tf
+1 0 0 1 48.00 140.00 Tm (10. Analyse des APIs) Tj
+/F3 8 Tf
+1 0 0 1 48.00 110.00 Tm (| Méthode | Route | Rôle |) Tj
+1 0 0 1 48.00 96.00 Tm (|---|---|---|) Tj
+1 0 0 1 48.00 82.00 Tm (| GET | `/api/data-status` | statut chargement Excel |) Tj
+1 0 0 1 48.00 68.00 Tm (| GET | `/api/incidents/` | liste incidents |) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 28 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 3585 >>
+stream
+BT
+/F3 8 Tf
+1 0 0 1 48.00 788.00 Tm (| GET | `/api/incidents/stats` | total incidents, agences, GAB |) Tj
+1 0 0 1 48.00 774.00 Tm (| GET | `/api/incidents/top-agencies` | agences impactées |) Tj
+1 0 0 1 48.00 760.00 Tm (| GET | `/api/incidents/top-atms` | GAB impactés |) Tj
+1 0 0 1 48.00 746.00 Tm (| GET | `/api/incidents/monthly` | tendance mensuelle réelle |) Tj
+1 0 0 1 48.00 732.00 Tm (| GET | `/api/incidents/categories` | répartition catégories |) Tj
+1 0 0 1 48.00 718.00 Tm (| GET | `/api/incidents/motifs` | répartition motifs |) Tj
+1 0 0 1 48.00 704.00 Tm (| GET | `/api/incidents/maintenance-kpis` | MTTR, motif, ville impactée |) Tj
+1 0 0 1 48.00 690.00 Tm (| GET | `/api/rgph/stats` | KPIs RGPH |) Tj
+1 0 0 1 48.00 676.00 Tm (| GET | `/api/rgph/population` | population par ville |) Tj
+1 0 0 1 48.00 662.00 Tm (| GET | `/api/rgph/incidents-per-100k` | incidents normalisés |) Tj
+1 0 0 1 48.00 648.00 Tm (| GET | `/api/map/` | points carte |) Tj
+1 0 0 1 48.00 634.00 Tm (| POST | `/api/ai/train` | réentraîner modèle |) Tj
+1 0 0 1 48.00 620.00 Tm (| POST | `/api/ai/predict` | prédiction camelCase interne |) Tj
+1 0 0 1 48.00 606.00 Tm (| POST | `/api/predict` | prédiction snake_case soutenance |) Tj
+1 0 0 1 48.00 592.00 Tm (| GET | `/api/predict/atms` | GAB + features formulaire |) Tj
+1 0 0 1 48.00 578.00 Tm (| GET | `/api/predict/at-risk` | GAB triés par probabilité |) Tj
+1 0 0 1 48.00 564.00 Tm (| GET | `/api/ai/top-critical` | top GAB critiques |) Tj
+1 0 0 1 48.00 550.00 Tm (| GET | `/api/ai/recommendations` | recommandations métier |) Tj
+/F1 10 Tf
+1 0 0 1 48.00 530.00 Tm (Exemple `POST /api/predict`:) Tj
+/F3 8 Tf
+1 0 0 1 48.00 509.00 Tm ({) Tj
+1 0 0 1 48.00 497.00 Tm (  "atmCode": "1081",) Tj
+1 0 0 1 48.00 485.00 Tm (  "agency": "AL QODS",) Tj
+1 0 0 1 48.00 473.00 Tm (  "city": "Kénitra",) Tj
+1 0 0 1 48.00 461.00 Tm (  "typeGab": "WINCOR",) Tj
+1 0 0 1 48.00 449.00 Tm (  "dominantCategory": "AUTRES",) Tj
+1 0 0 1 48.00 437.00 Tm (  "dominantMotif": "Perturbation",) Tj
+1 0 0 1 48.00 425.00 Tm (  "incidents_7d": 4,) Tj
+1 0 0 1 48.00 413.00 Tm (  "incidents_30d": 19,) Tj
+1 0 0 1 48.00 401.00 Tm (  "incidents_90d": 30,) Tj
+1 0 0 1 48.00 389.00 Tm (  "monthly_frequency": 9,) Tj
+1 0 0 1 48.00 377.00 Tm (  "population": 1274663,) Tj
+1 0 0 1 48.00 365.00 Tm (  "pct_over60": 11.8,) Tj
+1 0 0 1 48.00 353.00 Tm (  "transaction_volume": 3670) Tj
+1 0 0 1 48.00 341.00 Tm (}) Tj
+/F1 10 Tf
+1 0 0 1 48.00 323.00 Tm (Réponse:) Tj
+/F3 8 Tf
+1 0 0 1 48.00 302.00 Tm ({) Tj
+1 0 0 1 48.00 290.00 Tm (  "risk_score": 97.1,) Tj
+1 0 0 1 48.00 278.00 Tm (  "risk_level": "Critique",) Tj
+1 0 0 1 48.00 266.00 Tm (  "probability": 0.971,) Tj
+1 0 0 1 48.00 254.00 Tm (  "explanation": "Le risque est estimé à 97.1%...",) Tj
+1 0 0 1 48.00 242.00 Tm (  "recommendation": "Planifier une intervention préventive prioritaire.") Tj
+1 0 0 1 48.00 230.00 Tm (}) Tj
+/F2 15 Tf
+1 0 0 1 48.00 212.00 Tm (11. Explication du Frontend) Tj
+/F1 10 Tf
+1 0 0 1 48.00 182.00 Tm (React organise l'interface en pages et composants. `useEffect` charge les données,) Tj
+1 0 0 1 48.00 169.00 Tm (  `useState` stocke les réponses et les composants affichent cartes, graphiques et tables.) Tj
+1 0 0 1 48.00 156.00 Tm (  `api.ts` centralise les appels avec timeout, messages d'erreur et mapping de formats.) Tj
+1 0 0 1 48.00 143.00 Tm (  `types/api.ts` sécurise les contrats JSON.) Tj
+1 0 0 1 48.00 122.00 Tm (La page Prédiction IA a deux usages: prédiction automatique via `/api/predict/at-risk`, et) Tj
+1 0 0 1 48.00 109.00 Tm (  prédiction manuelle via `/api/predict/atms` puis `/api/predict`.) Tj
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 28 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 3778 >>
+stream
+BT
+/F2 15 Tf
+1 0 0 1 48.00 788.00 Tm (12. Explication du Backend) Tj
+/F1 10 Tf
+1 0 0 1 48.00 758.00 Tm (FastAPI expose les routes, Pydantic valide les données, les services réalisent les calculs.) Tj
+1 0 0 1 48.00 745.00 Tm (  `data_loader.py` charge les Excel au démarrage et évite les rechargements inutiles.) Tj
+1 0 0 1 48.00 732.00 Tm (  `ai_service.py` construit les features, target, modèle, prédictions et recommandations.) Tj
+/F2 15 Tf
+1 0 0 1 48.00 711.00 Tm (13. Questions possibles du jury) Tj
+/F2 12 Tf
+1 0 0 1 48.00 681.00 Tm (Question 1. Quel problème métier résout ce projet ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 656.00 Tm (Réponse courte: Il aide à anticiper les GAB à risque de panne afin de prioriser la) Tj
+1 0 0 1 48.00 643.00 Tm (  maintenance.) Tj
+1 0 0 1 48.00 622.00 Tm (Réponse détaillée: Le projet transforme l'historique d'incidents GAB et les données RGPH en) Tj
+1 0 0 1 48.00 609.00 Tm (  indicateurs de risque. Au lieu d'attendre qu'un automate tombe en panne, la banque peut) Tj
+1 0 0 1 48.00 596.00 Tm (  repérer les GAB dont la fréquence d'incidents, les motifs dominants ou le contexte local) Tj
+1 0 0 1 48.00 583.00 Tm (  augmentent la probabilité d'une panne future.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 562.00 Tm (Question 2. Pourquoi avoir utilisé FastAPI ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 537.00 Tm (Réponse courte: FastAPI est rapide, typé et adapté aux APIs REST modernes.) Tj
+1 0 0 1 48.00 516.00 Tm (Réponse détaillée: FastAPI permet de définir clairement les routes, les schémas Pydantic et) Tj
+1 0 0 1 48.00 503.00 Tm (  les réponses JSON. Dans ce projet, il expose les données incidents, RGPH, carte et) Tj
+1 0 0 1 48.00 490.00 Tm (  prédiction IA à React via des endpoints comme /api/incidents/stats et /api/predict.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 469.00 Tm (Question 3. Pourquoi React côté frontend ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 444.00 Tm (Réponse courte: React facilite la construction d'une interface dynamique par composants.) Tj
+1 0 0 1 48.00 423.00 Tm (Réponse détaillée: La sidebar, les cartes KPI, les graphiques, les tables et la page) Tj
+1 0 0 1 48.00 410.00 Tm (  Prédiction IA sont des composants réutilisables. React permet de gérer les états de) Tj
+1 0 0 1 48.00 397.00 Tm (  chargement, les erreurs API et les données renvoyées par FastAPI.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 376.00 Tm (Question 4. À quoi sert TypeScript ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 351.00 Tm (Réponse courte: Il sécurise les échanges de données côté frontend.) Tj
+1 0 0 1 48.00 330.00 Tm (Réponse détaillée: Les interfaces dans frontend/src/types/api.ts décrivent les réponses) Tj
+1 0 0 1 48.00 317.00 Tm (  backend. Cela réduit les erreurs entre frontend et backend, par exemple pour) Tj
+1 0 0 1 48.00 304.00 Tm (  PredictionAtmFeatures, AtRiskPredictionItem ou MaintenanceKpiResponse.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 283.00 Tm (Question 5. Quelles données réelles sont utilisées ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 258.00 Tm (Réponse courte: Incidents GAB, RGPH, mapping agence-ville et statistiques villes.) Tj
+1 0 0 1 48.00 237.00 Tm (Réponse détaillée: Les fichiers Excel dans backend/data alimentent le store mémoire:) Tj
+1 0 0 1 48.00 224.00 Tm (  Pannes_GAB_Fusionnees, RGPH_2024_Banque_Populaire, Mapping_Agence_Ville et) Tj
+1 0 0 1 48.00 211.00 Tm (  Statistiques_Villes. Ils donnent les incidents, agences, GAB, villes, population et) Tj
+1 0 0 1 48.00 198.00 Tm (  coordonnées.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 177.00 Tm (Question 6. Combien d'incidents sont chargés ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 152.00 Tm (Réponse courte: 9616 incidents.) Tj
+1 0 0 1 48.00 131.00 Tm (Réponse détaillée: Le statut de chargement indique 9616 incidents, 223 agences, 306 GAB et 9) Tj
+1 0 0 1 48.00 118.00 Tm (  villes RGPH. Ces chiffres viennent de get_data_status\(\) après chargement Excel.) Tj
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 28 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 3651 >>
+stream
+BT
+/F2 12 Tf
+1 0 0 1 48.00 788.00 Tm (Question 7. Pourquoi charger les Excel au démarrage ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 763.00 Tm (Réponse courte: Pour éviter de relire les fichiers à chaque requête.) Tj
+1 0 0 1 48.00 742.00 Tm (Réponse détaillée: data_loader.py utilise un verrou et un état _loaded.) Tj
+1 0 0 1 48.00 729.00 Tm (  load_default_data\(force=False\) ne recharge pas si les données sont déjà en mémoire. Cela) Tj
+1 0 0 1 48.00 716.00 Tm (  améliore la performance des endpoints.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 695.00 Tm (Question 8. Comment les colonnes Excel sont-elles détectées ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 670.00 Tm (Réponse courte: Avec une recherche robuste par alias normalisés.) Tj
+1 0 0 1 48.00 649.00 Tm (Réponse détaillée: La fonction _column normalise les accents, espaces et caractères) Tj
+1 0 0 1 48.00 636.00 Tm (  spéciaux. Cela permet de trouver Date & heure Réel même si un nom proche est utilisé.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 615.00 Tm (Question 9. Pourquoi utiliser un store mémoire ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 590.00 Tm (Réponse courte: Pour simplifier le prototype et accélérer les lectures.) Tj
+1 0 0 1 48.00 569.00 Tm (Réponse détaillée: backend/app/store.py contient des listes cities, agencies, atms et) Tj
+1 0 0 1 48.00 556.00 Tm (  incidents. Les services lisent ces structures sans base SQL obligatoire. Pour une version) Tj
+1 0 0 1 48.00 543.00 Tm (  industrielle, une base relationnelle ou data warehouse serait préférable.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 522.00 Tm (Question 10. Qu'est-ce que incidents_7d ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 497.00 Tm (Réponse courte: Le nombre d'incidents du GAB dans les 7 derniers jours avant une date de) Tj
+1 0 0 1 48.00 484.00 Tm (  référence.) Tj
+1 0 0 1 48.00 463.00 Tm (Réponse détaillée: Dans _build_feature_record, le code compte les incidents dont reported_at) Tj
+1 0 0 1 48.00 450.00 Tm (  est entre cutoff - 7 jours et cutoff. C'est un indicateur de tension très récente.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 429.00 Tm (Question 11. Qu'est-ce que incidents_30d ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 404.00 Tm (Réponse courte: Le nombre d'incidents sur les 30 derniers jours.) Tj
+1 0 0 1 48.00 383.00 Tm (Réponse détaillée: Cette variable capte la dynamique mensuelle récente d'un automate. Elle) Tj
+1 0 0 1 48.00 370.00 Tm (  est plus stable que 7 jours mais reste proche du présent opérationnel.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 349.00 Tm (Question 12. Qu'est-ce que incidents_90d ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 324.00 Tm (Réponse courte: Le nombre d'incidents sur les 90 derniers jours.) Tj
+1 0 0 1 48.00 303.00 Tm (Réponse détaillée: Elle donne une vision trimestrielle, utile pour repérer un GAB) Tj
+1 0 0 1 48.00 290.00 Tm (  durablement fragile même si la dernière semaine est calme.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 269.00 Tm (Question 13. Qu'est-ce que monthly_frequency ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 244.00 Tm (Réponse courte: La fréquence moyenne mensuelle d'incidents du GAB.) Tj
+1 0 0 1 48.00 223.00 Tm (Réponse détaillée: Elle est calculée par len\(history\) / observed_months. Elle compare) Tj
+1 0 0 1 48.00 210.00 Tm (  équitablement des GAB ayant des historiques de durée différente.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 189.00 Tm (Question 14. Pourquoi utiliser population et pct_over60 ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 164.00 Tm (Réponse courte: Pour intégrer le contexte territorial RGPH.) Tj
+1 0 0 1 48.00 143.00 Tm (Réponse détaillée: Un GAB dans une zone plus peuplée ou à profil démographique sensible peut) Tj
+1 0 0 1 48.00 130.00 Tm (  avoir un enjeu métier plus fort. Ces variables ne remplacent pas les incidents, elles) Tj
+1 0 0 1 48.00 117.00 Tm (  enrichissent l'analyse.) Tj
+ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 28 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Length 3704 >>
+stream
+BT
+/F2 12 Tf
+1 0 0 1 48.00 788.00 Tm (Question 15. Les transactions réelles sont-elles disponibles ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 763.00 Tm (Réponse courte: Non, elles sont estimées puis modifiables.) Tj
+1 0 0 1 48.00 742.00 Tm (Réponse détaillée: Le code estime transaction_volume par 1200 + monthly_frequency * 180 +) Tj
+1 0 0 1 48.00 729.00 Tm (  population / 1500. Dans le formulaire, l'utilisateur peut modifier Transactions / jour.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 708.00 Tm (Question 16. Comment sont encodées les variables catégorielles ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 683.00 Tm (Réponse courte: Par dictionnaires d'encodage entiers.) Tj
+1 0 0 1 48.00 662.00 Tm (Réponse détaillée: La fonction _encode convertit catégorie, motif, type, ville et agence en) Tj
+1 0 0 1 48.00 649.00 Tm (  codes numériques nécessaires au modèle. Les encodeurs sont sauvegardés avec l'artefact ML.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 628.00 Tm (Question 17. Comment est créée la target ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 603.00 Tm (Réponse courte: target=1 si le GAB devient critique le mois suivant.) Tj
+1 0 0 1 48.00 582.00 Tm (Réponse détaillée: Pour chaque mois sauf le dernier, le code construit l'historique jusqu'à) Tj
+1 0 0 1 48.00 569.00 Tm (  la fin du mois, puis compte les incidents du mois suivant. Si ce count dépasse un seuil) Tj
+1 0 0 1 48.00 556.00 Tm (  mensuel, target vaut 1.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 535.00 Tm (Question 18. Quel est le seuil critique ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 510.00 Tm (Réponse courte: Un seuil basé sur les données: max\(3, percentile 75 des counts positifs du) Tj
+1 0 0 1 48.00 497.00 Tm (  mois suivant\).) Tj
+1 0 0 1 48.00 476.00 Tm (Réponse détaillée: Cette règle évite un seuil arbitraire fixe trop faible ou trop haut. Le) Tj
+1 0 0 1 48.00 463.00 Tm (  seuil critique moyen calculé dans ce projet est 6.0 incidents.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 442.00 Tm (Question 19. Pourquoi prédire le mois suivant ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 417.00 Tm (Réponse courte: Parce que c'est proche d'une décision de maintenance préventive.) Tj
+1 0 0 1 48.00 396.00 Tm (Réponse détaillée: La banque doit planifier des interventions avant que le risque ne se) Tj
+1 0 0 1 48.00 383.00 Tm (  matérialise. La logique mois suivant simule une question opérationnelle: quels GAB risquent) Tj
+1 0 0 1 48.00 370.00 Tm (  de devenir problématiques le mois prochain ?) Tj
+/F2 12 Tf
+1 0 0 1 48.00 349.00 Tm (Question 20. Pourquoi Random Forest ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 324.00 Tm (Réponse courte: Il est robuste, explicable et fonctionne bien avec variables mixtes.) Tj
+1 0 0 1 48.00 303.00 Tm (Réponse détaillée: Random Forest combine plusieurs arbres de décision. Il supporte des) Tj
+1 0 0 1 48.00 290.00 Tm (  relations non linéaires et réduit le surapprentissage par agrégation de nombreux arbres.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 269.00 Tm (Question 21. Qu'est-ce qu'un arbre de décision ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 244.00 Tm (Réponse courte: Une suite de questions oui/non sur les variables.) Tj
+1 0 0 1 48.00 223.00 Tm (Réponse détaillée: Un arbre peut par exemple séparer les GAB avec incidents_90d élevé, puis) Tj
+1 0 0 1 48.00 210.00 Tm (  monthly_frequency élevée, puis catégorie HARDWARE. Chaque feuille donne une probabilité de) Tj
+1 0 0 1 48.00 197.00 Tm (  risque.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 176.00 Tm (Question 22. Qu'est-ce qu'une forêt aléatoire ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 151.00 Tm (Réponse courte: Un ensemble d'arbres entraînés sur des sous-échantillons.) Tj
+1 0 0 1 48.00 130.00 Tm (Réponse détaillée: Chaque arbre vote. La probabilité finale correspond à la proportion) Tj
+1 0 0 1 48.00 117.00 Tm (  d'arbres qui classent le GAB comme critique futur. Cela stabilise la prédiction.) Tj
+ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 28 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 18 0 R >>
+endobj
+20 0 obj
+<< /Length 3546 >>
+stream
+BT
+/F2 12 Tf
+1 0 0 1 48.00 788.00 Tm (Question 23. Où est sauvegardé le modèle ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 763.00 Tm (Réponse courte: backend/ml_artifacts/gab_failure_random_forest.joblib.) Tj
+1 0 0 1 48.00 742.00 Tm (Réponse détaillée: Le service utilise joblib.dump pour sauvegarder l'artefact complet:) Tj
+1 0 0 1 48.00 729.00 Tm (  modèle, colonnes de features, encodeurs, métriques, seuil target et date d'entraînement.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 708.00 Tm (Question 24. Que contient l'artefact ML ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 683.00 Tm (Réponse courte: Modèle, features, encodeurs, métriques et métadonnées.) Tj
+1 0 0 1 48.00 662.00 Tm (Réponse détaillée: Dans ai_service.py, artifact contient kind, model, featureColumns,) Tj
+1 0 0 1 48.00 649.00 Tm (  encoders, metrics, xgboostMetrics, targetThreshold et trainedAt.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 628.00 Tm (Question 25. Quelle est l'accuracy obtenue ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 603.00 Tm (Réponse courte: 0.774.) Tj
+1 0 0 1 48.00 582.00 Tm (Réponse détaillée: Cela signifie que 77.4% des exemples de test sont classés correctement.) Tj
+1 0 0 1 48.00 569.00 Tm (  Mais cette métrique seule peut être trompeuse si les classes sont déséquilibrées.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 548.00 Tm (Question 26. Quelle est la precision ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 523.00 Tm (Réponse courte: 0.651.) Tj
+1 0 0 1 48.00 502.00 Tm (Réponse détaillée: Quand le modèle annonce un GAB à risque, il a raison environ 65.1% du) Tj
+1 0 0 1 48.00 489.00 Tm (  temps sur l'échantillon de test. C'est utile pour éviter trop de fausses alertes.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 468.00 Tm (Question 27. Quel est le recall ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 443.00 Tm (Réponse courte: 0.458.) Tj
+1 0 0 1 48.00 422.00 Tm (Réponse détaillée: Le modèle détecte environ 45.8% des vrais cas positifs. C'est) Tj
+1 0 0 1 48.00 409.00 Tm (  améliorable, mais cohérent avec un historique court et une target reconstruite.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 388.00 Tm (Question 28. Quel est le F1 score ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 363.00 Tm (Réponse courte: 0.537.) Tj
+1 0 0 1 48.00 342.00 Tm (Réponse détaillée: Le F1 équilibre precision et recall. Il montre que le modèle est utile) Tj
+1 0 0 1 48.00 329.00 Tm (  mais pas parfait; il doit être considéré comme une aide à la décision.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 308.00 Tm (Question 29. Quel est le ROC-AUC ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 283.00 Tm (Réponse courte: 0.803.) Tj
+1 0 0 1 48.00 262.00 Tm (Réponse détaillée: Un ROC-AUC de 0.803 indique une bonne capacité de ranking: le modèle) Tj
+1 0 0 1 48.00 249.00 Tm (  ordonne globalement mieux les GAB risqués que le hasard.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 228.00 Tm (Question 30. Pourquoi ne pas prétendre que le modèle est industriel ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 203.00 Tm (Réponse courte: Parce que certaines données métier manquent.) Tj
+1 0 0 1 48.00 182.00 Tm (Réponse détaillée: Il manque les transactions réelles par GAB, les logs techniques) Tj
+1 0 0 1 48.00 169.00 Tm (  détaillés, les interventions maintenance et une vraie étiquette panne future validée.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 148.00 Tm (Question 31. Comment fonctionne POST /api/predict ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 123.00 Tm (Réponse courte: Il reçoit les features d'un GAB et renvoie score, niveau, probabilité et) Tj
+1 0 0 1 48.00 110.00 Tm (  explication.) Tj
+1 0 0 1 48.00 89.00 Tm (Réponse détaillée: Si atmCode est fourni, le backend reconstruit les features depuis) Tj
+1 0 0 1 48.00 76.00 Tm (  l'historique réel du GAB, puis applique le modèle sauvegardé.) Tj
+ET
+endstream
+endobj
+21 0 obj
+<< /Type /Page /Parent 28 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 20 0 R >>
+endobj
+22 0 obj
+<< /Length 3573 >>
+stream
+BT
+/F2 12 Tf
+1 0 0 1 48.00 788.00 Tm (Question 32. Pourquoi le frontend passe par /api ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 763.00 Tm (Réponse courte: Pour utiliser le proxy Vite et éviter les problèmes CORS/Safari.) Tj
+1 0 0 1 48.00 742.00 Tm (Réponse détaillée: api.ts définit BASE_URL = VITE_API_URL ?? '/api'. En développement, Vite) Tj
+1 0 0 1 48.00 729.00 Tm (  proxifie /api vers FastAPI.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 708.00 Tm (Question 33. Que fait GET /api/predict/atms ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 683.00 Tm (Réponse courte: Il retourne tous les GAB disponibles avec leurs features calculées.) Tj
+1 0 0 1 48.00 662.00 Tm (Réponse détaillée: La page Prédiction IA utilise cet endpoint pour remplir automatiquement) Tj
+1 0 0 1 48.00 649.00 Tm (  le select Code GAB, l'agence, la ville, le type, les incidents 7/30/90 jours et le contexte) Tj
+1 0 0 1 48.00 636.00 Tm (  RGPH.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 615.00 Tm (Question 34. Que fait GET /api/predict/at-risk ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 590.00 Tm (Réponse courte: Il retourne les GAB triés par probabilité décroissante.) Tj
+1 0 0 1 48.00 569.00 Tm (Réponse détaillée: Le frontend filtre ensuite les GAB Critique, Élevé ou probabilité > 70%) Tj
+1 0 0 1 48.00 556.00 Tm (  pour la section automatique.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 535.00 Tm (Question 35. Pourquoi garder le formulaire manuel ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 510.00 Tm (Réponse courte: Pour tester un GAB précis avec transactions ajustées.) Tj
+1 0 0 1 48.00 489.00 Tm (Réponse détaillée: La banque peut sélectionner un GAB réel, conserver les features) Tj
+1 0 0 1 48.00 476.00 Tm (  historiques et modifier uniquement Transactions / jour si elle dispose d'une meilleure) Tj
+1 0 0 1 48.00 463.00 Tm (  estimation métier.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 442.00 Tm (Question 36. Comment sont calculés les niveaux de risque ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 417.00 Tm (Réponse courte: Faible <40, Moyen 40-59, Élevé 60-79, Critique >=80.) Tj
+1 0 0 1 48.00 396.00 Tm (Réponse détaillée: La fonction _risk_category applique ces seuils. POST /api/predict utilise) Tj
+1 0 0 1 48.00 383.00 Tm (  probability*100 comme risk_score.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 362.00 Tm (Question 37. Quelle différence entre riskScore et failureProbability ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 337.00 Tm (Réponse courte: La probabilité vient du modèle; le score est l'expression métier sur 100.) Tj
+1 0 0 1 48.00 316.00 Tm (Réponse détaillée: Dans la prédiction manuelle, riskScore = probability*100. Dans la liste) Tj
+1 0 0 1 48.00 303.00 Tm (  automatique, riskScore combine aussi un score métier heuristique avec la probabilité, les) Tj
+1 0 0 1 48.00 290.00 Tm (  incidents et la durée.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 269.00 Tm (Question 38. Pourquoi la liste automatique peut avoir Élevé avec probabilité) Tj
+1 0 0 1 48.00 254.00 Tm (  très forte ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 229.00 Tm (Réponse courte: Le niveau dépend du score métier combiné, pas seulement de la probabilité.) Tj
+1 0 0 1 48.00 208.00 Tm (Réponse détaillée: Dans _latest_rows_for_atms, le riskScore automatique combine) Tj
+1 0 0 1 48.00 195.00 Tm (  incidents_90d, durée moyenne, diversité de catégories, poids de catégorie et probabilité ML.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 174.00 Tm (Question 39. Où sont les routes frontend ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 149.00 Tm (Réponse courte: frontend/src/routes/AppRoutes.tsx.) Tj
+1 0 0 1 48.00 128.00 Tm (Réponse détaillée: Ce fichier mappe les chemins /, /incidents, /demographics, /map,) Tj
+1 0 0 1 48.00 115.00 Tm (  /predictions et /recommendations vers les pages correspondantes.) Tj
+ET
+endstream
+endobj
+23 0 obj
+<< /Type /Page /Parent 28 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 22 0 R >>
+endobj
+24 0 obj
+<< /Length 3747 >>
+stream
+BT
+/F2 12 Tf
+1 0 0 1 48.00 788.00 Tm (Question 40. Quel composant gère la navigation ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 763.00 Tm (Réponse courte: Sidebar.tsx et Navbar.tsx.) Tj
+1 0 0 1 48.00 742.00 Tm (Réponse détaillée: Sidebar affiche les sections métier; Navbar contient le statut IA, le) Tj
+1 0 0 1 48.00 729.00 Tm (  bouton menu et les notifications.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 708.00 Tm (Question 41. Comment les erreurs API sont affichées ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 683.00 Tm (Réponse courte: api.ts construit des messages détaillés.) Tj
+1 0 0 1 48.00 662.00 Tm (Réponse détaillée: fetchJson ajoute l'URL, le status HTTP, le détail backend, les erreurs) Tj
+1 0 0 1 48.00 649.00 Tm (  timeout et les erreurs réseau/CORS.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 628.00 Tm (Question 42. Pourquoi les loaders ne restent plus infinis ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 603.00 Tm (Réponse courte: Les appels utilisent catch/finally côté pages.) Tj
+1 0 0 1 48.00 582.00 Tm (Réponse détaillée: Chaque page met fin au loading même en cas d'erreur et affiche un message) Tj
+1 0 0 1 48.00 569.00 Tm (  compréhensible au lieu d'un spinner permanent.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 548.00 Tm (Question 43. Comment fonctionne le Dashboard ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 523.00 Tm (Réponse courte: Il agrège stats incidents, RGPH, top agences, catégories, KPIs maintenance) Tj
+1 0 0 1 48.00 510.00 Tm (  et données IA.) Tj
+1 0 0 1 48.00 489.00 Tm (Réponse détaillée: Dashboard.tsx appelle plusieurs endpoints via Promise.all, puis alimente) Tj
+1 0 0 1 48.00 476.00 Tm (  les KpiCard et les graphiques.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 455.00 Tm (Question 44. Comment fonctionne la carte interactive ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 430.00 Tm (Réponse courte: Elle agrège les incidents par ville et colore selon le risque.) Tj
+1 0 0 1 48.00 409.00 Tm (Réponse détaillée: backend/app/services/data_service.py enrichit les points avec gabCount,) Tj
+1 0 0 1 48.00 396.00 Tm (  averageRiskScore et riskCategory; React/Leaflet affiche les points et popups.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 375.00 Tm (Question 45. Qu'est-ce que MTTR ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 350.00 Tm (Réponse courte: Mean Time To Repair, durée moyenne de résolution.) Tj
+1 0 0 1 48.00 329.00 Tm (Réponse détaillée: Dans ce projet, il est basé sur Durée \(min\). La valeur actuelle est 120.8) Tj
+1 0 0 1 48.00 316.00 Tm (  minutes.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 295.00 Tm (Question 46. Pourquoi ne pas calculer MTBF ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 270.00 Tm (Réponse courte: Les données ne donnent pas un temps de fonctionnement fiable entre pannes.) Tj
+1 0 0 1 48.00 249.00 Tm (Réponse détaillée: Sans logs de disponibilité ou dates de remise en service fiables, MTBF ou) Tj
+1 0 0 1 48.00 236.00 Tm (  disponibilité réseau seraient inventés. Le projet se limite aux KPIs calculables.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 215.00 Tm (Question 47. Pourquoi utiliser Mois_Source ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 190.00 Tm (Réponse courte: Pour respecter les mois réellement présents dans les fichiers.) Tj
+1 0 0 1 48.00 169.00 Tm (Réponse détaillée: Le graphique mensuel utilise les mois présents, de Sep 2025 à Avr 2026,) Tj
+1 0 0 1 48.00 156.00 Tm (  sans ajouter des mois artificiels à zéro.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 135.00 Tm (Question 48. Comment répondre si le jury critique les métriques ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 110.00 Tm (Réponse courte: Dire que le modèle est une première version explicable et améliorable.) Tj
+1 0 0 1 48.00 89.00 Tm (Réponse détaillée: Les métriques sont honnêtement présentées. Le ROC-AUC est bon, le recall) Tj
+1 0 0 1 48.00 76.00 Tm (  reste perfectible. L'objectif PFA est de démontrer un pipeline complet et une aide à la) Tj
+1 0 0 1 48.00 63.00 Tm (  décision, pas un modèle industriel final.) Tj
+ET
+endstream
+endobj
+25 0 obj
+<< /Type /Page /Parent 28 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 24 0 R >>
+endobj
+26 0 obj
+<< /Length 4072 >>
+stream
+BT
+/F2 12 Tf
+1 0 0 1 48.00 788.00 Tm (Question 49. Qu'est-ce qui rend le projet Big Data & IA ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 763.00 Tm (Réponse courte: L'intégration multi-sources, la préparation de features temporelles et le) Tj
+1 0 0 1 48.00 750.00 Tm (  modèle prédictif.) Tj
+1 0 0 1 48.00 729.00 Tm (Réponse détaillée: Le projet combine Excel incidents, RGPH, mapping, agrégations métier, API) Tj
+1 0 0 1 48.00 716.00 Tm (  REST, visualisations et Random Forest sauvegardé.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 695.00 Tm (Question 50. Comment améliorer le modèle ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 670.00 Tm (Réponse courte: Ajouter transactions réelles, logs techniques, maintenance et plus) Tj
+1 0 0 1 48.00 657.00 Tm (  d'historique.) Tj
+1 0 0 1 48.00 636.00 Tm (Réponse détaillée: Avec plus de données labellisées, on pourrait comparer XGBoost, tuning) Tj
+1 0 0 1 48.00 623.00 Tm (  d'hyperparamètres, validation temporelle stricte et monitoring en production.) Tj
+/F2 12 Tf
+1 0 0 1 48.00 602.00 Tm (Question 51. Quelle est la réponse la plus importante à mémoriser ?) Tj
+/F1 10 Tf
+1 0 0 1 48.00 577.00 Tm (Réponse courte: Le projet transforme des incidents historiques en actions de maintenance) Tj
+1 0 0 1 48.00 564.00 Tm (  priorisées.) Tj
+1 0 0 1 48.00 543.00 Tm (Réponse détaillée: Tout part de la donnée réelle: incidents et RGPH. Le backend nettoie et) Tj
+1 0 0 1 48.00 530.00 Tm (  calcule les features; le modèle estime le risque; le frontend rend les résultats) Tj
+1 0 0 1 48.00 517.00 Tm (  exploitables par la banque.) Tj
+/F2 15 Tf
+1 0 0 1 48.00 490.00 Tm (14. Forces du projet) Tj
+/F1 10 Tf
+1 0 0 1 48.00 460.00 Tm (Points forts techniques: architecture séparée React/FastAPI, API typée, données réelles,) Tj
+1 0 0 1 48.00 447.00 Tm (  import Excel robuste, Random Forest sauvegardé, prédiction manuelle et automatique,) Tj
+1 0 0 1 48.00 434.00 Tm (  visualisations métier, gestion d'erreurs claire, proxy Vite `/api`.) Tj
+1 0 0 1 48.00 413.00 Tm (Points forts métier: priorisation des GAB à risque, motifs et catégories dominants, KPIs) Tj
+1 0 0 1 48.00 400.00 Tm (  maintenance, contexte RGPH, recommandations exploitables.) Tj
+/F2 15 Tf
+1 0 0 1 48.00 379.00 Tm (15. Limites du projet) Tj
+/F1 10 Tf
+1 0 0 1 48.00 349.00 Tm (Historique limité à Sep 2025 - Avr 2026; transactions réelles absentes; logs techniques) Tj
+1 0 0 1 48.00 336.00 Tm (  absents; historique maintenance incomplet; target reconstruite; store mémoire adapté au) Tj
+1 0 0 1 48.00 323.00 Tm (  prototype; recall améliorable.) Tj
+/F2 15 Tf
+1 0 0 1 48.00 302.00 Tm (16. Améliorations futures) Tj
+/F1 10 Tf
+1 0 0 1 48.00 272.00 Tm (Ajouter transactions réelles, logs techniques, interventions maintenance, XGBoost, tuning) Tj
+1 0 0 1 48.00 259.00 Tm (  d'hyperparamètres, validation temporelle stricte, monitoring de dérive, PostgreSQL/data) Tj
+1 0 0 1 48.00 246.00 Tm (  warehouse, authentification, réentraînement automatique et données temps réel.) Tj
+/F2 15 Tf
+1 0 0 1 48.00 225.00 Tm (17. Résumé final à mémoriser) Tj
+/F1 10 Tf
+1 0 0 1 48.00 195.00 Tm (Ce projet transforme l'historique réel des incidents GAB et les données RGPH en outil d'aide) Tj
+1 0 0 1 48.00 182.00 Tm (  à la décision. Le backend nettoie les Excel, calcule des features temporelles, entraîne un) Tj
+1 0 0 1 48.00 169.00 Tm (  Random Forest et expose les prédictions via API. Le frontend React affiche les KPIs, les) Tj
+1 0 0 1 48.00 156.00 Tm (  analyses, la carte, les recommandations et une page de prédiction IA avec deux usages:) Tj
+1 0 0 1 48.00 143.00 Tm (  identifier automatiquement les GAB à risque et tester manuellement un GAB précis.) Tj
+1 0 0 1 48.00 122.00 Tm (Phrase de soutenance possible:) Tj
+1 0 0 1 48.00 101.00 Tm (> Mon projet transforme l'historique réel des incidents GAB et les données RGPH en outil) Tj
+1 0 0 1 48.00 88.00 Tm (  d'aide à la décision. L'objectif n'est pas seulement d'afficher des statistiques, mais) Tj
+1 0 0 1 48.00 75.00 Tm (  d'anticiper les automates les plus susceptibles de devenir critiques afin de prioriser la) Tj
+1 0 0 1 48.00 62.00 Tm (  maintenance préventive.) Tj
+ET
+endstream
+endobj
+27 0 obj
+<< /Type /Page /Parent 28 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 26 0 R >>
+endobj
+28 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R] /Count 12 >>
+endobj
+29 0 obj
+<< /Type /Catalog /Pages 28 0 R >>
+endobj
+xref
+0 30
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000000228 00000 n 
+0000003865 00000 n 
+0000004012 00000 n 
+0000008264 00000 n 
+0000008411 00000 n 
+0000012733 00000 n 
+0000012880 00000 n 
+0000016323 00000 n 
+0000016472 00000 n 
+0000020110 00000 n 
+0000020259 00000 n 
+0000024090 00000 n 
+0000024239 00000 n 
+0000027943 00000 n 
+0000028092 00000 n 
+0000031849 00000 n 
+0000031998 00000 n 
+0000035597 00000 n 
+0000035746 00000 n 
+0000039372 00000 n 
+0000039521 00000 n 
+0000043321 00000 n 
+0000043470 00000 n 
+0000047595 00000 n 
+0000047744 00000 n 
+0000047878 00000 n 
+trailer
+<< /Size 30 /Root 29 0 R >>
+startxref
+47929
+%%EOF

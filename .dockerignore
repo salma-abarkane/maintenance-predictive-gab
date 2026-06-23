@@ -1,0 +1,16 @@
+# Ignore temporary and build files
+.git
+.gitignore
+node_modules
+frontend/node_modules
+backend/venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+dist
+frontend/dist
+frontend/.cache
+.vscode
+.DS_Store

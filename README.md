@@ -54,3 +54,41 @@ docker compose up --build
 
 - Frontend: `http://localhost:4173`
 - Backend: `http://localhost:8000`
+
+## ✨ Features
+
+- 🤖 AI-powered predictive maintenance for ATM networks
+- 📊 Interactive dashboard with KPIs and analytics
+- 📈 Machine Learning model for ATM failure prediction
+- 🗺️ Interactive geographic visualization using Leaflet
+- 🏦 ATM incident management and analysis
+- 👥 Demographic (RGPH) data integration
+- 💡 AI-based maintenance recommendations
+- 📄 PDF report generation
+- ⚡ FastAPI REST API
+- 🎨 Modern React + TypeScript user interface
+
+  ## 🛠️ Tech Stack
+
+**Frontend**
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+- Recharts
+- React Leaflet
+
+**Backend**
+- FastAPI
+- Python
+- SQLAlchemy
+- SQLite
+- Pandas
+- Scikit-learn
+- XGBoost
+
+**Tools**
+- Docker
+- Git
+- GitHub

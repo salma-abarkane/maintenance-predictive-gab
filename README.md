@@ -1,18 +1,22 @@
-# Système de maintenance prédictive des GAB
+# ATM Predictive Maintenance Platform
 
-Projet de fin d'études PFA en Big Data & Intelligence Artificielle pour la Banque Populaire.
+End-of-Studies (PFE) project in Big Data & Artificial Intelligence developed for Banque Populaire.
+
+## Overview
+
+This project is an AI-powered predictive maintenance platform for ATM networks. It combines Machine Learning, geospatial analytics, and interactive dashboards to predict ATM failures, analyze incidents, and support data-driven maintenance decisions using operational and demographic data.
 
 ## Architecture
 
-- Frontend: React + TypeScript + Vite + Tailwind CSS + React Router + Recharts + React Leaflet + Lucide Icons
-- Backend: FastAPI + Python + Pandas + Scikit-Learn + XGBoost + SQLAlchemy + SQLite
+- **Frontend:** React + TypeScript + Vite + Tailwind CSS + React Router + Recharts + React Leaflet + Lucide Icons
+- **Backend:** FastAPI + Python + Pandas + Scikit-learn + XGBoost + SQLAlchemy + SQLite
 
-## Structure
+## Project Structure
 
-- `frontend/` - application web React
-- `backend/` - API FastAPI et moteur IA
+- `frontend/` – React web application
+- `backend/` – FastAPI backend and AI engine
 
-## Commandes d'installation
+## Installation
 
 ### Frontend
 
@@ -32,7 +36,7 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000
 ```
 
-## Endpoints principales
+## API Endpoints
 
 - `GET http://localhost:8000/api/summary`
 - `GET http://localhost:8000/api/incidents`
@@ -44,33 +48,34 @@ uvicorn app.main:app --reload --port 8000
 
 ## Docker
 
-### Lancer les services avec Docker Compose
+### Run the application with Docker Compose
 
 ```bash
 docker compose up --build
 ```
 
-### Accès
+### Access
 
-- Frontend: `http://localhost:4173`
-- Backend: `http://localhost:8000`
+- **Frontend:** `http://localhost:4173`
+- **Backend:** `http://localhost:8000`
 
-## ✨ Features
+## Features
 
 - 🤖 AI-powered predictive maintenance for ATM networks
 - 📊 Interactive dashboard with KPIs and analytics
 - 📈 Machine Learning model for ATM failure prediction
 - 🗺️ Interactive geographic visualization using Leaflet
-- 🏦 ATM incident management and analysis
-- 👥 Demographic (RGPH) data integration
-- 💡 AI-based maintenance recommendations
+- 🏦 ATM incident management and analytics
+- 👥 Integration of demographic (RGPH) data
+- 💡 AI-powered maintenance recommendations
 - 📄 PDF report generation
 - ⚡ FastAPI REST API
 - 🎨 Modern React + TypeScript user interface
 
-  ## 🛠️ Tech Stack
+## Tech Stack
 
-**Frontend**
+### Frontend
+
 - React
 - TypeScript
 - Vite
@@ -79,7 +84,8 @@ docker compose up --build
 - Recharts
 - React Leaflet
 
-**Backend**
+### Backend
+
 - FastAPI
 - Python
 - SQLAlchemy
@@ -88,7 +94,8 @@ docker compose up --build
 - Scikit-learn
 - XGBoost
 
-**Tools**
+### Tools
+
 - Docker
 - Git
 - GitHub

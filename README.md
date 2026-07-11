@@ -1,6 +1,6 @@
 # ATM Predictive Maintenance Platform
 
-End-of-Studies (PFE) project in Big Data & Artificial Intelligence developed for Banque Populaire.
+Academic Final Project (PFA) project in Big Data & Artificial Intelligence developed for Banque Populaire.
 
 ## Overview
 

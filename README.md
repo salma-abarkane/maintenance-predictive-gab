@@ -256,6 +256,7 @@ docker compose up --build
 
 ---
 
+<<<<<<< HEAD
 # 🌐 Application URLs
 
 Frontend
@@ -314,3 +315,47 @@ Big Data & Artificial Intelligence Engineering Student
 # 📄 License
 
 This project was developed as an academic engineering internship project for **Banque Centrale Populaire**.
+=======
+- Frontend: `http://localhost:4173`
+- Backend: `http://localhost:8000`
+
+## 📸 Application Preview
+
+### Executive Dashboard
+
+Overview of network performance, KPIs, and operational indicators.
+
+![Executive Dashboard](assets/dashboard.png)
+
+---
+
+### Incident Analytics
+
+Analyze incidents by category, city, agency, and date.
+
+![Incident Analytics](assets/incidents.png)
+
+---
+
+### Interactive Map
+
+Visualize ATM and agency locations using geographic coordinates.
+
+![Interactive Map](assets/map.png)
+
+---
+
+### AI Prediction Engine
+
+Identify ATMs with a high probability of failure and rank them by risk.
+
+![AI Prediction Engine](assets/prediction.png)
+
+---
+
+### Recommendation Engine
+
+Generate prioritized preventive maintenance recommendations for critical ATMs.
+
+![Recommendation Engine](assets/recommendation.png)
+>>>>>>> 6a866de (Add project screenshots to README)

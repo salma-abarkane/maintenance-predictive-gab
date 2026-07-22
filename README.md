@@ -306,8 +306,8 @@ Big Data & Artificial Intelligence Engineering Student
 
 📍 Rabat, Morocco
 
-- LinkedIn: https://linkedin.com/in/salma-abarkane
-- GitHub: https://github.com/salma-abarkane
+- 🔗 [LinkedIn](https://linkedin.com/in/salma-abarkane)
+- 💻 [GitHub](https://github.com/salma-abarkane)
 
 ---
 
